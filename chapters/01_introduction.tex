@@ -1,0 +1,59 @@
+% Separate preamble for this subfile. This preamble is loaded last, so one can override various functions before \begin{document}
+
+% Better comment extension for Vscode colors these comments differently
+% Normal comment color
+% * Important information
+% ! ALERT
+% ? Question
+% TODO stuff to do
+% // This is strikethrough
+
+In the vast ever-evolving landscape of machine learning there exists a set of techniques that distills complex data into meaningfull and compact representations. 
+By creating models that systematically learns to finds patterns and important information in data we expore the Representation or feature learning domain in Machine learning. We have recently witnessed
+some impressive results and development on the generative modelling front, giving us realistic image, video and timeseries predictions \cite{lee2023masked}. 
+Simultaneously, improving the understanding of representations is essential for advancing our capabilities in tasks like anomaly detection, reinforcement learning, and few-shot learning.
+
+
+
+
+\subsection*{Representations}
+A representation can be viewed as a way of transforming or encoding data in a manner that captures essential features or characteristics of the data. 
+These representations can make the data more amenable to analysis, interpretation, and processing by machine learning algorithms. In machine learning we often have a loss proned mapping
+where a non-invertible function, such as a encoder, is tasked with reducing the dimensions of data. Giving us a representation space. The informational loss has a direct effect on 
+the quality of the representations, and varies based on what downstream task we are performing. 
+
+The question of what makes a valid representation is often explained by the terms sufficiency and minimality.
+A good representation should contain sufficient information to faithfully perform a given task or analysis, while simultaneously being minimal in the sense that it doesn't contain extraneous or redundant information
+
+For instance, in the context of image recognition, a good representation should capture the distinguishing features of objects or patterns within the images, allowing a classifier to 
+accurately classify them. At the same time, it should discard irrelevant details, such as noise or variations that dont affect the classification. 
+
+
+
+\subsection*{Research Question}
+In our investigation, we delve into the learning capabilities of a Vector Quantified Variational Autoencoder (VQ-VAE) in the context of self-supervised learning (SSL).
+Our aim is to discern whether the VQ-VAE can capture class-related information within its discrete latent variables, and to what extent these variables contribute to the characterization of time series shapes and types within the UCR dataset. 
+Specifically, we are interested in understanding if the representations derived from these discrete variables meet the criteria of sufficiency and minimality for the task of classifying labels accurately.
+
+To critically evaluate the representations' utility for our classification task, we adopt a set of metrics:
+\begin{enumerate}
+    \item \textbf{Intrinstic dimension}. This measure identifies the most straightforward yet comprehensive set of features required to grasp our data's structure. By applying Principal Component Analysis (PCA) and pinpointing the principal components that account for 95\%
+     of data variance, we approximate the intrinstic dimension.
+    \item \textbf{Non linear probe}. We employ a K-Nearest Neighbors (KNN) approach, experimenting with k values of 1, 5, and 10, to evaluate the latent variables' capacity to hold and predict label information effectively. 
+    \item \textbf{Linear probe}. By fitting a Support Vector Machine (SVM) with a linear kernel to our discrete latent variables, we investigate the models ability in distilling and condensing essential information in a linear separatable way.
+\end{enumerate}
+
+In the context of the Informational Bottleneck (IB) principle \cite{TishbyPereiraBialek2000} our evaluation of the Vector Quantified Variational Autoencoder (VQ-VAE) through metrics like intrinstic dimension, KNN, and SVM probes aligns closely with
+the core objectives of IB. Here the representations are grounded in the concepts of mutual information. Mutual information quantifies the amount of information obtained about one random variable through another random variable. In our case input $X$ and the discrete latent variable $Z$.
+
+The Information Bottleneck (IB) method is framed as the following optimization problem:
+$$ inf_{p(z|x)} \left[ I(X;Z)-\beta I(Z;Y) \right] $$
+
+Where $I(X;Z)$ is the mutual information between the input $X$ and latent representation $Z$. $I(Z;Y)$ is the mutual information between the representation $Z$ and output $Y$. $\beta$ serves as a lagrange multiplier, representing the trade-off between
+compression and prediction accuracy. The concept of minimality and sufficiency align with the objective of IB.
+
+\textbf{Minimality} refers to the concept of compressing the input data $X$ as much as possible without loosing relevant information. Finding a $Z$ that minimizes the mutual information $I(X;Z)$. We thus investigate if VQVAE can encode the data to a lower-dimensional
+latent space that captures the essence of $X$ relative to the downstream task of accurately classifying $Y$. Measuring the intrinsic dimension helps to ensure minimality by showing that the representation is as compressed as possible while still capturing the core properties of the data.
+
+\textbf{sufficiency} is about retaining as much useful information as possible about the output Y in the representation Z. This is achieved by maximizing $I(Z;Y)$, ensuring that $Z$ contains enough information to make accurace predictions about Y.
+The KNN and SVM accuracies are tools to assess the quality of the representations $Z$, while also reflecting the sufficiency. A high accuracy indicates that $Z$ maintains enough information about $Y$ despite the reduction in dimensionality.

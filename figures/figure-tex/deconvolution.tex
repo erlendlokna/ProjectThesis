@@ -1,0 +1,47 @@
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        cell/.style={rectangle,draw=black},
+        grid/.style={matrix of nodes, row sep=-\pgflinewidth, column sep=-\pgflinewidth, nodes={cell, minimum size=5mm}},
+        label/.style={midway, above, sloped}
+    ]
+    
+    % Input feature map grid
+    \matrix[grid] (input) {
+        & & & \\
+        & |[fill=orange!30]| & |[fill=orange!30]| & \\
+        & |[fill=orange!30]| & |[fill=orange!30]| & \\
+        & & & \\
+    };
+    
+    \node[above=10pt of input-1-1] (input-label) {Input Feature Map};
+    
+    % Transposed convolution filter grid (deconvolution)
+    \matrix[grid, right=2cm of input] (filter) {
+        |[fill=teal!30]| & |[fill=teal!30]| & |[fill=teal!30]| \\
+        |[fill=teal!30]| & |[fill=teal!30]| & |[fill=teal!30]| \\
+        |[fill=teal!30]| & |[fill=teal!30]| & |[fill=teal!30]| \\
+    };
+    
+    \node[above=10pt of filter-1-1] (filter-label) {Transposed Conv Filter};
+    
+    % Output feature map grid
+    \matrix[grid, right=2cm of filter] (output) {
+        & & & & & & & \\
+        & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & & \\
+        & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & & \\
+        & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & & \\
+        & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & & \\
+        & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & |[fill=blue!30]| & & \\
+        & & & & & & & \\
+    };
+    
+    \node[above=10pt of output-1-1] (output-label) {Output Feature Map};
+    
+    % Draw arrows
+    \draw[-latex, thick] (input) -- (filter) node[label] {Expands};
+    \draw[-latex, thick] (filter) -- (output) node[label] {To};
+    
+    \end{tikzpicture}
+    \caption{Visualization of a transposed convolutional operation (deconvolution). The input feature map is expanded through the transposed convolutional filter to produce a larger output feature map.}
+\end{figure}

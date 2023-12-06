@@ -1,0 +1,58 @@
+% Title for the document
+% --------------------------------------------------------------------------
+
+\begin{titlepage}
+	\makeatletter
+	\let\thetitle\@title
+	\let\theauthor\@author
+	\let\thedate\@date
+	\makeatother
+
+	\centering
+    \vspace*{0.5 cm}
+    % University Logo
+    \includegraphics[width=0.7\textwidth]{ntnu.png}\\[1.0 cm]
+    
+	% University Name
+	\textsc{\LARGE \textsf{\NTNULowerC}}\\[1.0 cm]  %* sans serif no caps
+	%\textsc{\LARGE \textsf{\NTNU}}\\[1.0 cm]  %* sans serif caps
+    %\textsc{\LARGE \NTNU}\\[1.0 cm]  %* RM caps
+    
+	% Institute
+	\textsc{\Large \textsf{\NTNUinstituttLowerC}}\\[0.5 cm]  %* sans serif no caps
+    %\textsc{\Large \NTNUinstitutt}\\[0.5 cm]  %* RM caps
+	
+	% Course Name
+	\textsc{\large \textsf{\emnekode}}\\[0.5 cm]  %* sans serif no caps
+	%\textsc{\large \emnekode}\\[0.5 cm]  %* RM caps
+	
+	%------------
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \LARGE \textbf{\textsf{\uppercase{\thetitle}}}}\\
+	\rule{\linewidth}{0.2 mm} \\[1.0 cm]%[1.5 cm]
+	
+	%\input{figures/figure-tex/aper_BIG.tex}
+
+	% Page setup
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Author:}\\
+			\textrm{\theauthor}
+		\end{flushleft}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			\emph{\supervisorGrammar:} \\
+			\textrm{\supervisorA}\\  % Supervisor #1
+			\textrm{\supervisorB} %\\  % Supervisor #2
+			%\textrm{ } %\\  % Supervisor #3
+		\end{flushright}
+	\end{minipage}\\[1.5 cm]
+	
+
+	{\large \thedate}%\\[2 cm]
+ 
+	%\vfill
+
+\end{titlepage}
+

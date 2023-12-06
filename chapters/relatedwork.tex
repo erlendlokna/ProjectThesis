@@ -1,0 +1,17 @@
+
+This work builds on the original paper by Van den Oord et al\cite{neuvqvae}, "Neural Discrete Representation Learning", which introduce the Vector Quantified-Variational AutoEncoder (VQVAE).
+The VQVAE represents a significant advancement in generative models, particularly in learning discrete latent representations. The model's distinctive approach of employing vector quantization mitigates issues commonly assosiated with posterior collapse in traditional
+Variational AutoEncoders (VAEs).
+
+Following the introduction of VQVAE, there have been several notable advancements in this area. Researchers have explored various enhancements, such as improving the models ability to handle higher-dimensional data and increasing its efficiency in representation learning.
+A significant contribution in this domain was made by Razavi et al\cite{VQVAE-2}, who extended the VQVAE model to VQVAE-2, offering improvements in generating high fidelity images.
+
+Lee et al in their paper on VQVAE\cite{lee2023masked} also proposed a approach to enhancing the VQVAEs ability capture high frequency information in timeseries by using frequency augmentation techniques.
+\todo{fill}
+
+Other work has focused on improving traditional VAEs using contrastive SSL loss funcitons. Abid et al\cite{cvae} showed that using a contrastive approach in VAEs proved to improve the salient information in the latent variables. 
+
+Parallel to the developments in VQVAE, the Barlow Twins approach, as proposed by Zbontar et al\cite{Barlow}, has gained attention in the field of SSL. This method emphasizes the learning of representations by making the features of augmented versions of the same image as similar as possible, while minimizing redundancy among features of different images. 
+The Barlow Twins approach has shown promising results in enhancing the learning capabilities of neural networks, particularly in scenarios with limited or no labeled data. 
+Research done by Lee et al in their paper comparing SSL techniques on timeseries\cite{SSLs}, show that the decorrelation technique that Barlow Twins provide is efficient on a variatity of datasets in the UCR Archive\cite{UCRArchive2018}.
+
