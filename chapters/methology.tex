@@ -285,7 +285,8 @@ These techniques operate on the time-frequency representation of the time series
 
 \textbf{STFT Augmentation}: The most comprehensive technique in this implementation is the STFT (Short Time Fourier Transform) augmentation. It involves transforming the time series into the frequency domain using STFT, modifying the phase components using noise, and then reconstructing the time series. This process is particularly effective in introducing complex and subtle variations that are not easily achievable through direct time domain manipulations.
 
-\begin{figure}[h]
-    \includegraphics[scale=0.5]{figures/figure-pdf/Augmentations.pdf}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/figure-pdf/Augmentations.pdf}
     \caption{Visualization of the flip, slope and STFT augmentation aplied on a timeseries. }
 \end{figure}

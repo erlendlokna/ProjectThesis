@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber thesis"] 1701791736 "thesis.bcf" "thesis.bbl" "thesis" 1701861935
+["biber thesis"] 1701867590 "thesis.bcf" "thesis.bbl" "thesis" 1701867596
   "references.bib" 1701696893 7821 bcb415cb4e652edcde41b84cba24ab11 ""
-  "thesis.bcf" 1701861935 110424 7e2d3da46514312c7ce5942c051b88e7 "pdflatex"
+  "thesis.bcf" 1701867595 110424 7e2d3da46514312c7ce5942c051b88e7 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
-["pdflatex"] 1701861933 "/home/erlendlokna/Documents/ntnu/ProjectThesis/thesis.tex" "thesis.pdf" "thesis" 1701861935
+["pdflatex"] 1701867593 "/home/erlendlokna/Documents/ntnu/ProjectThesis/thesis.tex" "thesis.pdf" "thesis" 1701867596
   "/etc/texmf/web2c/texmf.cnf" 1696834195 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/erlendlokna/Documents/ntnu/ProjectThesis/thesis.tex" 1701771056 3316 816c4b82ab19574249b86efa5e239734 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -434,13 +434,13 @@
   "chapters/00_x2__preface.tex" 1697626256 1739 35b91ee715063c0c9f30c98dcec94f71 ""
   "chapters/00_x2__quote.tex" 1697626256 488 a6b1b4b7e8e865c10b8e947695d3a2ce ""
   "chapters/appendix.tex" 1700064088 1082 3f78de4b2c0af30d27addc2ccf911af1 ""
-  "chapters/experimentalsetup.tex" 1701860219 6057 61c21a94e9e8d5d3ee58807b2c7dfbf4 ""
-  "chapters/methology.tex" 1701787394 24049 8510682c9a1ec4e97380f14cc6fb7f7e ""
+  "chapters/experimentalsetup.tex" 1701866861 6154 7a098f21a3ced0ea2b204cd5e91ec2c7 ""
+  "chapters/methology.tex" 1701867590 24069 4d0782b8998b0d81b2ebe8a6bcc2e5aa ""
   "chapters/relatedwork.tex" 1701770297 2168 0d34bf5f174205b758dd472668031088 ""
   "chapters/theoretical_background.tex" 1701861933 18958 0cf2ca2f4a30cdc80640927299cc7e42 ""
   "figures/figure-pdf/2NN.pdf" 1701702138 15377 a2f83a47c8b2596bef7a4ba918655f8f ""
   "figures/figure-pdf/5NN.pdf" 1701702104 15522 897aad5eb1ba90ba628401d273cbb8ee ""
-  "figures/figure-pdf/Augmentations.pdf" 1701431395 19447 c1fc137de476fde73410bc47091b4070 ""
+  "figures/figure-pdf/Augmentations.pdf" 1701867408 26167 f15311fed22f84eb1476e89074567f24 ""
   "figures/figure-pdf/BarlowT.pdf" 1701684186 109054 9ea1aa4891cb9123eb72c7bff408e244 ""
   "figures/figure-pdf/BarlowTwinsVQVAE.pdf" 1701777143 114977 85be0a3cf3b64123ac100985da2d7c90 ""
   "figures/figure-pdf/Downstreams.pdf" 1701789263 26369 2ad56eca9439ff280dc803c458ca51b9 ""
@@ -458,12 +458,12 @@
   "preamble/head_mk2.sty" 1701771372 5884 349e5d841f73f934357e0b612b5061f4 ""
   "support_files/commands.tex" 1697626257 5673 e4bdac76f74654a9b9bc66a799f61fef ""
   "support_files/critical_info.tex" 1698054572 1249 163ee15d59d516cb2198dfa028b6c757 ""
-  "thesis.aux" 1701861935 20096 c23f5fea9b54a9ab424133d3d5bb93ce "pdflatex"
-  "thesis.bbl" 1701791737 36520 fed99eb9100443583dcca050b9f73967 "biber thesis"
-  "thesis.out" 1701861935 8777 812398f9893f88fa70aae6899f479f16 "pdflatex"
-  "thesis.run.xml" 1701861935 2356 ff046116e7a3402e213ca8e3d8a40e9a "pdflatex"
+  "thesis.aux" 1701867595 20096 c23f5fea9b54a9ab424133d3d5bb93ce "pdflatex"
+  "thesis.bbl" 1701867591 36520 fed99eb9100443583dcca050b9f73967 "biber thesis"
+  "thesis.out" 1701867595 8777 812398f9893f88fa70aae6899f479f16 "pdflatex"
+  "thesis.run.xml" 1701867595 2356 ff046116e7a3402e213ca8e3d8a40e9a "pdflatex"
   "thesis.tex" 1701771056 3316 816c4b82ab19574249b86efa5e239734 ""
-  "thesis.toc" 1701861935 5308 0519e7dc22077b3dc4b7a40963486418 "pdflatex"
+  "thesis.toc" 1701867595 5308 0519e7dc22077b3dc4b7a40963486418 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"
