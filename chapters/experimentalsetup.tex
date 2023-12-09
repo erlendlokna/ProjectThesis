@@ -27,7 +27,8 @@ The chosen subset for the experiment emphasize datasets that vary not only in si
     FordA & 4921 & 2 & 500 \\
     UWaveGestureLibraryAll & 4478 & 8 & 945 \\
     FordB & 4446 & 2 & 500 \\
-    ChlorineConcentration & 4307 & 3 & 166
+    ChlorineConcentration & 4307 & 3 & 166 \\
+    ShapesAll & 1200 & 60 & 512 \\
     \end{tabular}
     \caption{Chosen UCR Archive subset. Data collected by Lee et al\cite{SSLs}}
     \label{tab:sample_table}
@@ -37,6 +38,7 @@ The chosen subset for the experiment emphasize datasets that vary not only in si
 We evaluate the reconstruction accuracy by calculating $\mathcal{L}_\text{recon}$ in eq \ref{eq:recon} using the validation set. 
 Giving $\mathcal{L}_\text{val-recon}$.
 This gives us a score on how well the models generalize on the validation set.
+
 
 \section{Downstream evaluation}
 In the training phase of our models, we incorporate a set of downstream tasks. These tasks are distinct from the primary training process in that they do not influence the gradient updates during backpropagation. Instead, their primary role is to offer insights into various aspects of the model's performance and capabilities.
@@ -53,11 +55,12 @@ This gives us the models discrete latent representations, $Z_\text{train}$ and $
     \label{fig:latents}
 \end{figure}
 
-This gives us the encoder-codebook latent representations, which is usefull to examine how the 
+During training of the models, we can now perform downstream tests on $Z, Z_\text{train}, Z_\text{test}$.
 
 \subsection{Downstream tests}
 The \textbf{intrinstic dimension} measure identifies the most straight forward yet comprehensive set of features required to grasp our data's structure. We approximate the intrinstic dimension by applying a Principal Component Analysis (PCA) on $Z$ and pinpoint the number of principal components that account for 95\%
 of the variance. This provides a measure of the complexity of the discrete latent variables. 
+Other metrics like entropy and perplexity is also calculated, giving us additional comparison material.
 
 By fitting supervised models on $(Z, Y)_\text{train}$ and predicting on $(Z, Y)_\text{test}$ we can investigate the richness of information in the discrete latent variables related to the labels.
 We use two supervised approaches: \textbf{SVM} and \textbf{KNN}. The SVM is implemented with a linear kernel, hence measuring the linear seperatability of the latent space. A high classification accuracy would suggest that the labeled timeseries are linearly separable as discrete latent representations. 
@@ -66,3 +69,12 @@ For the KNN algorithm we experiment with three different values for K, namely $1
 Additionally to the richness of information related to the labels, we are also investigating if the discrete latent variables ($Z_\text{train}$, $Z_\text{test}$) are seperatable into clusters. We test this by designing a experiment using the unsupervised \textbf{KMeans} algorithm and \textbf{Silhouette score}.
 By fitting 15 Kmeans clusters on the latent representations  and average the silhouette scores, we get a downstream metric of how well the discrete latent space is clusterable for each model. 
 
+
+%\section{Model and training configurations}
+%We use the same model and training configurations for the VQVAE as done in the paper by lee et al \cite{lee2023masked}.
+%The configuration of the models is summarized as follows:
+
+%The encoder reduces the input dimensions such that the continous latent variables is 64 dimensional. The codebook is set so that it produces a discrete 64 dimensional latent variable. Both the decoder and encoder use 4 residual blocks.
+%The STFT algorithm is implemented with a $n_\text{fft} = 8$. The $\beta$ weight parameter in the codebook loss equation \ref{eq:codebook} is set to 1.
+
+%The BT-VQVAE use the same encoder, decoder and codebook configurations as for the VQVAE. Additionally, the projector dimensions consists of 4096 fully connected hidden layers with a output dimension of 4096. As done by lee et al\cite{SSLs}.

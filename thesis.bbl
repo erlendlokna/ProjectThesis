@@ -127,38 +127,6 @@
       \verb arXiv:2002.05709
       \endverb
     \endentry
-    \entry{svm}{article}{}
-      \name{author}{2}{}{%
-        {{hash=c294bbcb0687bdb5113cc4c4cd6ebad3}{%
-           family={Cortes},
-           familyi={C\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=15983dfc99e798b246e3dff1eaa7b5ef}{%
-           family={Vapnik},
-           familyi={V\bibinitperiod},
-           given={V.},
-           giveni={V\bibinitperiod}}}%
-      }
-      \strng{namehash}{0deab44100f526de958d938be04f4e05}
-      \strng{fullhash}{0deab44100f526de958d938be04f4e05}
-      \strng{bibnamehash}{0deab44100f526de958d938be04f4e05}
-      \strng{authorbibnamehash}{0deab44100f526de958d938be04f4e05}
-      \strng{authornamehash}{0deab44100f526de958d938be04f4e05}
-      \strng{authorfullhash}{0deab44100f526de958d938be04f4e05}
-      \field{labelalpha}{CV95}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Machine Learning}
-      \field{title}{Support Vector Networks}
-      \field{volume}{20}
-      \field{year}{1995}
-      \field{pages}{273\bibrangedash 297}
-      \range{pages}{25}
-      \keyw{classification margin soft support svm vector}
-    \endentry
     \entry{UCRArchive2018}{misc}{}
       \name{author}{14}{}{%
         {{hash=c405e0c94297ac37d92350e926e0dc02}{%
@@ -243,6 +211,53 @@
       \field{note}{\url{https://www.cs.ucr.edu/~eamonn/time_series_data_2018/}}
       \field{title}{The UCR Time Series Classification Archive}
       \field{year}{2018}
+    \endentry
+    \entry{perceptron}{article}{}
+      \name{author}{1}{}{%
+        {{hash=049febc2400bcf6dec835b5098d62af6}{%
+           family={F},
+           familyi={F\bibinitperiod},
+           given={Rosenblatt},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{049febc2400bcf6dec835b5098d62af6}
+      \strng{fullhash}{049febc2400bcf6dec835b5098d62af6}
+      \strng{bibnamehash}{049febc2400bcf6dec835b5098d62af6}
+      \strng{authorbibnamehash}{049febc2400bcf6dec835b5098d62af6}
+      \strng{authornamehash}{049febc2400bcf6dec835b5098d62af6}
+      \strng{authorfullhash}{049febc2400bcf6dec835b5098d62af6}
+      \field{labelalpha}{F58}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Psychological Review}
+      \field{number}{6}
+      \field{title}{THE PERCEPTRON: A PROBABILISTIC MODEL FOR INFORMATION STORAGE AND ORGANIZATION}
+      \field{volume}{65}
+      \field{year}{1958}
+    \endentry
+    \entry{Fukushima}{article}{}
+      \name{author}{1}{}{%
+        {{hash=23d96062ed18321873ac4b8b6e2fc816}{%
+           family={Fukushima},
+           familyi={F\bibinitperiod},
+           given={Kunihiko},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{23d96062ed18321873ac4b8b6e2fc816}
+      \strng{fullhash}{23d96062ed18321873ac4b8b6e2fc816}
+      \strng{bibnamehash}{23d96062ed18321873ac4b8b6e2fc816}
+      \strng{authorbibnamehash}{23d96062ed18321873ac4b8b6e2fc816}
+      \strng{authornamehash}{23d96062ed18321873ac4b8b6e2fc816}
+      \strng{authorfullhash}{23d96062ed18321873ac4b8b6e2fc816}
+      \field{labelalpha}{Fuk80}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Neocognitron: A Self-organizing Neural Network Model for a Mechanism of Pattern Recognition Unaffected by Shift in Position}
+      \field{year}{1980}
     \endentry
     \entry{BYOL}{misc}{}
       \name{author}{14}{}{%
@@ -421,6 +436,32 @@
       \verb arXiv:1911.05722
       \endverb
     \endentry
+    \entry{HubelWiesel}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd60e0ff340eedf45ac4f5f2ae90159b}{%
+           family={Hubel},
+           familyi={H\bibinitperiod},
+           given={David\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=9983ff1caee0d9e4db67358c018fc205}{%
+           family={Wiesel},
+           familyi={W\bibinitperiod},
+           given={Torsten\bibnamedelima N.},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2b6710b3764273599eb886e1d51d495}
+      \strng{fullhash}{a2b6710b3764273599eb886e1d51d495}
+      \strng{bibnamehash}{a2b6710b3764273599eb886e1d51d495}
+      \strng{authorbibnamehash}{a2b6710b3764273599eb886e1d51d495}
+      \strng{authornamehash}{a2b6710b3764273599eb886e1d51d495}
+      \strng{authorfullhash}{a2b6710b3764273599eb886e1d51d495}
+      \field{labelalpha}{HW}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RECEPTIVE FIELDS AND FUNCTIONAL ARCHITECTURE OF MONKEY STRIATE CORTEX}
+    \endentry
     \entry{batchnorm}{misc}{}
       \name{author}{2}{}{%
         {{hash=5543e82359e26b035efc009cb3efff9d}{%
@@ -580,6 +621,43 @@
       \field{title}{Masked Generative Modeling with Enhanced Sampling Scheme}
       \field{year}{2023}
     \endentry
+    \entry{LeChun}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=844e183692f08a63f99285330fcf90cc}{%
+           family={Haffner},
+           familyi={H\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{bibnamehash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{authorbibnamehash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \field{labelalpha}{LeC+98}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gradient-based learning applied to document recognition}
+      \field{year}{1998}
+    \endentry
     \entry{Siamese}{article}{}
       \name{author}{3}{}{%
         {{hash=8449df2d22be789ac9cc32444c31921e}{%
@@ -612,35 +690,33 @@
       \field{title}{Siamese Neural Networks for One-shot Image Recognition}
       \field{year}{2015}
     \endentry
-    \entry{CNNs}{misc}{}
+    \entry{logcalc}{article}{}
       \name{author}{2}{}{%
-        {{hash=f92af5765968c6de4c1e42d397224c9c}{%
-           family={O'Shea},
-           familyi={O\bibinitperiod},
-           given={Keiron},
-           giveni={K\bibinitperiod}}}%
-        {{hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
-           family={Nash},
-           familyi={N\bibinitperiod},
-           given={Ryan},
-           giveni={R\bibinitperiod}}}%
+        {{hash=5a974296313f28b3fec2120402a76512}{%
+           family={McCulloch},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=d2127abee87ca702d60af8b21ff3f155}{%
+           family={Pitts},
+           familyi={P\bibinitperiod},
+           given={W.\bibnamedelimi H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
       }
-      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
-      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
-      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
-      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
-      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
-      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
-      \field{labelalpha}{ON15}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \strng{namehash}{44c12a0f6159d72717757abb9995356a}
+      \strng{fullhash}{44c12a0f6159d72717757abb9995356a}
+      \strng{bibnamehash}{44c12a0f6159d72717757abb9995356a}
+      \strng{authorbibnamehash}{44c12a0f6159d72717757abb9995356a}
+      \strng{authornamehash}{44c12a0f6159d72717757abb9995356a}
+      \strng{authorfullhash}{44c12a0f6159d72717757abb9995356a}
+      \field{labelalpha}{MP43}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{An Introduction to Convolutional Neural Networks}
-      \field{year}{2015}
-      \verb{eprint}
-      \verb arXiv:1511.08458
-      \endverb
+      \field{journaltitle}{Bulletin of Mathematical Biophysics}
+      \field{title}{A logical calculus of the ideas immanent in nervous activity}
+      \field{year}{1943}
     \endentry
     \entry{neuvqvae}{article}{}
       \name{author}{3}{}{%
@@ -681,6 +757,74 @@
       \verb{eprint}
       \verb 1711.00937
       \endverb
+    \endentry
+    \entry{Rumelhart}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authornamehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \field{extraname}{1}
+      \field{labelalpha}{RHW86}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning internal representations by error propagation}
+      \field{year}{1986}
+    \endentry
+    \entry{backprop2}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authornamehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \field{extraname}{2}
+      \field{labelalpha}{RHW86}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning representations by back-propagating errors}
+      \field{year}{1986}
     \endentry
     \entry{RiebesellTikZ2022}{software}{}
       \name{author}{1}{}{%
@@ -723,6 +867,33 @@
       \verb https://github.com/janosh/tikz
       \endverb
     \endentry
+    \entry{SGD}{article}{}
+      \name{author}{2}{}{%
+        {{hash=163566b92b332258782e61e3d217a2bb}{%
+           family={Robbins},
+           familyi={R\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=95751f7f614bc2af42f1a078b3e2ba61}{%
+           family={Monro},
+           familyi={M\bibinitperiod},
+           given={Sutton},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \strng{fullhash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \strng{bibnamehash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \strng{authorbibnamehash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \strng{authornamehash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \strng{authorfullhash}{5d85b58c5cbfcc8fc266cf4f5f6fbdbb}
+      \field{labelalpha}{RM51}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Stochastic Approximation Method}
+      \field{year}{1951}
+    \endentry
     \entry{VQVAE-2}{article}{}
       \name{author}{3}{}{%
         {{hash=9ca7515466980f5bf6d96e49e5e05993}{%
@@ -761,36 +932,6 @@
       \field{year}{2019}
       \verb{eprint}
       \verb 1906.00446
-      \endverb
-    \endentry
-    \entry{ReLuGrad}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=507a5668d3afda50f15711ae206da6a4}{%
-           family={Ven},
-           familyi={V\bibinitperiod},
-           given={Leni},
-           giveni={L\bibinitperiod}}}%
-        {{hash=c45f4a5d7a4dc8d0be4b3b63990aea9e}{%
-           family={Lederer},
-           familyi={L\bibinitperiod},
-           given={Johannes},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{88dfbd46bc111585502e2e5969ff604d}
-      \strng{fullhash}{88dfbd46bc111585502e2e5969ff604d}
-      \strng{bibnamehash}{88dfbd46bc111585502e2e5969ff604d}
-      \strng{authorbibnamehash}{88dfbd46bc111585502e2e5969ff604d}
-      \strng{authornamehash}{88dfbd46bc111585502e2e5969ff604d}
-      \strng{authorfullhash}{88dfbd46bc111585502e2e5969ff604d}
-      \field{labelalpha}{VL21}
-      \field{sortinit}{V}
-      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Regularization and Reparameterization Avoid Vanishing Gradients in Sigmoid-Type Networks}
-      \field{year}{2021}
-      \verb{eprint}
-      \verb arXiv:2106.02260
       \endverb
     \endentry
     \entry{posteriorcollapse}{article}{}
@@ -888,6 +1029,28 @@
       \verb{eprint}
       \verb 2002.12478
       \endverb
+    \endentry
+    \entry{backprop}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3f6ba0fa8bc8542632efe7f31c9ee2e8}{%
+           family={Werbos},
+           familyi={W\bibinitperiod},
+           given={Paul\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{fullhash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{bibnamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authorbibnamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authornamehash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \strng{authorfullhash}{3f6ba0fa8bc8542632efe7f31c9ee2e8}
+      \field{labelalpha}{Wer90}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Backpropagation Through Time: What It Does and How to Do It}
+      \field{year}{1990}
     \endentry
     \entry{Barlow}{misc}{}
       \name{author}{5}{}{%
