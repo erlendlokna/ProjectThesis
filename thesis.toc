@@ -10,16 +10,16 @@
 \contentsline {subsection}{\numberline {2.3.2}Pooling and Downsampling}{6}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Architecture of CNNs}{7}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Residual block}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Self Supervised Learning, SSL}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Self Supervised Learning, SSL}{8}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Contrastive and Non Contrastive learning}{9}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}The Role of Siamese Networks in SSL}{10}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.2}The Role of Siamese Networks in SSL}{9}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Barlow Twins}{10}{subsection.2.5.3}%
-\contentsline {subsubsection}{Objective function of Barlow Twins}{11}{section*.7}%
+\contentsline {subsubsection}{Objective function of Barlow Twins}{10}{section*.7}%
 \contentsline {subsubsection}{Siamese architecture}{11}{section*.8}%
 \contentsline {section}{\numberline {2.6}The Vector Quantized Variational Autoencoder, VQ-VAE}{12}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Evolution from Variational Auto-Encoder, VAE}{12}{subsection.2.6.1}%
 \contentsline {subsubsection}{Variational inference and optimization}{12}{section*.10}%
-\contentsline {subsubsection}{Challenges in Maximum Likelihood Estimation}{13}{section*.11}%
+\contentsline {subsubsection}{Challenges in Maximum Likelihood Estimation}{12}{section*.11}%
 \contentsline {subsubsection}{Variational Approximation}{13}{section*.12}%
 \contentsline {subsubsection}{Evidence Lower Bound}{13}{section*.13}%
 \contentsline {subsection}{\numberline {2.6.2}Transition to discrete latent variables}{14}{subsection.2.6.2}%
@@ -34,16 +34,17 @@
 \contentsline {subsection}{\numberline {4.3.2}Learning}{21}{subsection.4.3.2}%
 \contentsline {subsubsection}{Reconstruction}{21}{section*.19}%
 \contentsline {subsubsection}{Codebook-learning loss}{22}{section*.20}%
-\contentsline {subsubsection}{Gradient calculations}{22}{section*.21}%
+\contentsline {subsubsection}{Codebook Update Mechanism}{22}{section*.21}%
 \contentsline {section}{\numberline {4.4}Modifying the VQVAE for Enhanced Self Supervised Learning}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Modifying the VQVAE encoder}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Projector}{24}{subsection.4.4.2}%
 \contentsline {subsubsection}{Learning}{24}{section*.24}%
-\contentsline {subsection}{\numberline {4.4.2}Augmentation Techniques}{25}{subsection.4.4.2}%
-\contentsline {chapter}{\numberline {5}Experimental Setup}{27}{chapter.5}%
-\contentsline {section}{\numberline {5.1}UCR Archive}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Reconstruction evaluation}{28}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Downstream evaluation}{28}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Extracting Discrete latent variables}{29}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Downstream tests}{29}{subsection.5.3.2}%
-\contentsline {chapter}{\numberline {6}Results and discussion}{31}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion}{32}{chapter.7}%
+\contentsline {subsection}{\numberline {4.4.3}Augmentation Techniques}{25}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Experimental Setup}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}UCR Archive}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Reconstruction evaluation}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Downstream evaluation}{29}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Extracting Discrete latent variables}{30}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Downstream tests}{30}{subsection.5.3.2}%
+\contentsline {chapter}{\numberline {6}Results and discussion}{32}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{33}{chapter.7}%

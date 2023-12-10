@@ -151,15 +151,10 @@ specifically addressing the challenges of training deeper networks.
 
 The problem at hand, as described by He et al, is that deeper networks are more difficult to train. This challenge is primarily attributed to the vanishing gradient problem.
 In deeper networks, the gradient of the loss function tends to diminish progressively, complicating the training process. 
-The vanishing gradient problem emerges from the key mechanism in the backpropagation algorithm, the chain rule. The chain rule, a mathmatical principle, decomposes the gradient computation into a series of smaller,
-more manageable calculations. However, in deeper networks this recursive procedure can lead to increasingly smaller gradient values due to accumulating errors in the calculations. 
+This emerges from the key mechanism in the backpropagation algorithm, the chain rule. The chain rule, a mathmatical principle, decomposes the gradient computation into a series of smaller,
+more manageable calculations. In deeper networks this recursive procedure can lead to increasingly smaller gradient values due to accumulating errors in the large amount of smaller calculations. 
 
-The residual block, visualized in fig \ref{fig:resblock}, introduces a arhitecture feature known as the "shortcut connection" that helps mitigate this issue. 
-The core idea behind the shortcut connection is relatively simple yet highly effective.
-
-In a standard neural network layer, the input is transformed through a series of transformations as described in the section on Neural Networks. However, in a residual block, alongside the standard transformations,
-the input is also carried forward directly to the output of the layer via a shortcut connection. Skipping one or more layers.
-
+The residual block, visualized in fig \ref{fig:resblock}, introduces a arhitecture feature known as the "shortcut connection" that helps mitigate this issue.
 Mathematically, if we consider the standard layer operation as a function $F(x)$, where $x$ is the input to the layer, the output of a typical layer would be just $F(x)$. In the residual block,
 we define the output to be $H(x) = F(x) + x$. This addition of $x$ is the shortcut connection. Its a form of identity mapping ensuring that the deeper layers can, at the very least, achieve the performance of shallower
 networks by simply learning the identity function for the additional layers.
@@ -327,11 +322,11 @@ This means that for any given input, the posterior assigns a probability of one 
 (Stemmer formuleringen her??)
 
 We can investigate the effects on the KL divergence by viewing the model as a VAE, as Van den Oord in his paper. Meaning that we bound $\log p_\theta(x)$ by the ELBO $\mathcal{L}_{\theta, \phi}$.
-By now defining a simple uniform distribution over $z$ and using the one-hot deterministic $q(z=q|x)$ we can derive the KL-divergence as follows
+By now defining a simple uniform distribution over $z$ and using the one-hot deterministic $q(z=z_q|x)$ we can derive the KL-divergence as follows
 
 \begin{equation}
     \begin{aligned}
-        \mathcal{D}_{KL}(q_\phi(z|x) || p_\theta(z)) &= \sum_i \underbrace{q(z=q|x)}_{=1} \log \frac{\overbrace{q(z=q|x)}^{=1}}{\underbrace{p(z=q)}_{\frac{1}{K}}} \\
+        \mathcal{D}_{KL}(q_\phi(z|x) || p_\theta(z)) &= \sum_i q(z=q|x) \log \frac{ q(z=q|x)}{p(z=q)} \\
         &= \log K
     \end{aligned}
 \end{equation}
