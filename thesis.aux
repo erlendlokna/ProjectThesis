@@ -192,10 +192,14 @@
 \@writefile{toc}{\contentsline {subsubsection}{Codebook-learning loss}{22}{section*.20}\protected@file@percent }
 \newlabel{eq:codebook}{{4.4}{22}{Codebook-learning loss}{equation.4.4}{}}
 \newlabel{eq:codebook@cref}{{[equation][4][4]4.4}{[1][22][]22}}
+\newlabel{eq:codebook_update}{{4.5}{22}{Codebook-learning loss}{equation.4.5}{}}
+\newlabel{eq:codebook_update@cref}{{[equation][5][4]4.5}{[1][22][]22}}
 \@writefile{toc}{\contentsline {subsubsection}{Codebook Update Mechanism}{22}{section*.21}\protected@file@percent }
+\abx@aux@cite{0}{neuvqvae}
+\abx@aux@segm{0}{0}{neuvqvae}
 \abx@aux@cite{0}{Barlow}
 \abx@aux@segm{0}{0}{Barlow}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualization of the embedding space inspired by the original VQVAE paper\blx@tocontentsinit {0}\cite {neuvqvae}. The continous $z_{ij}$, in blue, gets mapped to the nearest token $z_k$. The gradient $\nabla _z \mathcal  {L}$ in the backpropagation is copied from the decoder to the encoder. \relax }}{23}{figure.caption.22}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Visualization of the embedding space inspired by the original VQVAE paper\blx@tocontentsinit {0}\cite {neuvqvae}. Continous representations $z_{ij}$ (in blue) are mapped to the nearest codebook token $z_k$. During backpropagation, the gradient $\nabla _z\mathcal  {L}$ is copied from the decoder to the encoder, enabling the encoder to adjust its outputs in subsequent forward passes.\relax }}{23}{figure.caption.22}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}Modifying the VQVAE for Enhanced Self Supervised Learning}{23}{section.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Modifying the VQVAE encoder}{23}{subsection.4.4.1}\protected@file@percent }
 \abx@aux@cite{0}{VICReg}
@@ -212,17 +216,17 @@
 \newlabel{fig:BTVQVAE}{{4.4}{24}{Illustration of the Barlow Twins modification to VQVAE including the loss function calculation.\relax }{figure.caption.23}{}}
 \newlabel{fig:BTVQVAE@cref}{{[figure][4][4]4.4}{[1][24][]24}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Projector}{24}{subsection.4.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Learning}{24}{section*.24}\protected@file@percent }
 \abx@aux@cite{0}{Barlow}
 \abx@aux@segm{0}{0}{Barlow}
 \abx@aux@cite{0}{augs}
 \abx@aux@segm{0}{0}{augs}
 \abx@aux@cite{0}{SSLs}
 \abx@aux@segm{0}{0}{SSLs}
+\@writefile{toc}{\contentsline {subsubsection}{Learning}{25}{section*.24}\protected@file@percent }
 \newlabel{eq:BTVQVAEloss}{{4.8}{25}{Learning}{equation.4.8}{}}
 \newlabel{eq:BTVQVAEloss@cref}{{[equation][8][4]4.8}{[1][25][]25}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Augmentation Techniques}{25}{subsection.4.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Visualization of the flip, slope and STFT augmentation aplied on a timeseries. \relax }}{27}{figure.caption.27}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Visualization of the augmentation techniques.\relax }}{27}{figure.caption.27}\protected@file@percent }
 \abx@aux@cite{0}{UCRArchive2018}
 \abx@aux@segm{0}{0}{UCRArchive2018}
 \abx@aux@cite{0}{SSLs}

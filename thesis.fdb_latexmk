@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber thesis"] 1702214159 "thesis.bcf" "thesis.bbl" "thesis" 1702214313
+["biber thesis"] 1702214999 "thesis.bcf" "thesis.bbl" "thesis" 1702217308
   "references.bib" 1702124014 11063 0e5fd6ed2929bd55fb45afa391915a65 ""
-  "thesis.bcf" 1702214313 111448 eff96697005efa78c08ff5f2e97973d4 "pdflatex"
+  "thesis.bcf" 1702217308 111499 77bc51152e40d2332e6080b5864116b7 "pdflatex"
   (generated)
   "thesis.bbl"
   "thesis.blg"
-["pdflatex"] 1702214310 "/home/erlendlokna/Documents/ntnu/prosjektoppgave/thesis.tex" "thesis.pdf" "thesis" 1702214313
+["pdflatex"] 1702217306 "/home/erlendlokna/Documents/ntnu/prosjektoppgave/thesis.tex" "thesis.pdf" "thesis" 1702217308
   "/etc/texmf/web2c/texmf.cnf" 1696834195 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/erlendlokna/Documents/ntnu/prosjektoppgave/thesis.tex" 1701771056 3316 816c4b82ab19574249b86efa5e239734 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -437,7 +437,7 @@
   "chapters/00_x2__quote.tex" 1697626256 488 a6b1b4b7e8e865c10b8e947695d3a2ce ""
   "chapters/appendix.tex" 1700064088 1082 3f78de4b2c0af30d27addc2ccf911af1 ""
   "chapters/experimentalsetup.tex" 1701964244 7166 e66ec6d638d76d7e141ce88595463731 ""
-  "chapters/methology.tex" 1702214310 18013 10a2637ca4018b1acf098e07380a281c ""
+  "chapters/methology.tex" 1702217303 18392 0d024e228fe3ffe3fc78fd77788467e6 ""
   "chapters/relatedwork.tex" 1701770297 2168 0d34bf5f174205b758dd472668031088 ""
   "chapters/theoretical_background.tex" 1702210224 30707 40f15b89bfed1a170f127f683b7ffccc ""
   "figures/figure-pdf/Augmentations.pdf" 1701867408 26167 f15311fed22f84eb1476e89074567f24 ""
@@ -457,12 +457,12 @@
   "preamble/head_mk2.sty" 1701771372 5884 349e5d841f73f934357e0b612b5061f4 ""
   "support_files/commands.tex" 1697626257 5673 e4bdac76f74654a9b9bc66a799f61fef ""
   "support_files/critical_info.tex" 1698054572 1249 163ee15d59d516cb2198dfa028b6c757 ""
-  "thesis.aux" 1702214313 19713 e181225ef98258245e519d907f54a90a "pdflatex"
-  "thesis.bbl" 1702214159 43918 4804369400f6f9655d703523bacbdf81 "biber thesis"
-  "thesis.out" 1702214313 6452 665b89d9869650d09edba2d4c2e8a4b1 "pdflatex"
-  "thesis.run.xml" 1702214313 2356 ff046116e7a3402e213ca8e3d8a40e9a "pdflatex"
+  "thesis.aux" 1702217308 19980 4e1e0bc989d2187139d980feaf662199 "pdflatex"
+  "thesis.bbl" 1702215000 43918 4804369400f6f9655d703523bacbdf81 "biber thesis"
+  "thesis.out" 1702217308 6452 665b89d9869650d09edba2d4c2e8a4b1 "pdflatex"
+  "thesis.run.xml" 1702217308 2356 ff046116e7a3402e213ca8e3d8a40e9a "pdflatex"
   "thesis.tex" 1701771056 3316 816c4b82ab19574249b86efa5e239734 ""
-  "thesis.toc" 1702214313 4114 adab872c7f1f830f1b911859eb15cccb "pdflatex"
+  "thesis.toc" 1702217308 4114 e834299c418bfb3dda9e85cdc312ec44 "pdflatex"
   (generated)
   "thesis.aux"
   "thesis.bcf"

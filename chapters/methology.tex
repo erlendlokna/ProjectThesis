@@ -32,7 +32,7 @@ The number of encoder blocks is determined by a downsampling rate which is deter
 \end{figure}
 
 \section{Decoder}
-The Decoder model, also ispired by CNNs and ResNet, is designed to reconstruct the input data from the latent representation. Approximating the likelihood $p_\theta(x|z)$.
+The Decoder model, also ispired by CNNs and ResNet, is designed to reconstruct the input data from the latent representation. Approximating the distribution $p_\theta(x|z)$.
 Its main function is decompression. It is responsible for the upsampling of the latent representation to a higher dimension, while also refining the feature maps to recover details that were lost during encoding.
 Like the encoder, the decoder consists of two two types of blocks, decoder blocks and residual blocks.
 
@@ -42,12 +42,12 @@ The transposed convolutions apply filters in a manner that distributes the encod
 This process not only increases the spatial dimensions but also refines the feature map to recover details that were compressed during encoding.
 Following the transpose convolutional layer the upsample block uses batch normalization and ReLu activation function.
 
-The decoder's architecture is characterized by a series residual blocks followed by decoder blocks that progressively restore the data's dimensionality. The number of upsampling blocks is the same as number of downsampling blocks in the encoder. 
+The decoder's architecture consist of 4 residual blocks followed by decoder blocks that progressively restore the data's dimensionality. The number of decoder blocks is the same as number of encoder blocks in the encoder. 
 
 
 \section{VQVAE}
 
-We divide the description of the VQVAE implementation into two sections: procedure of reconstring the input $x \rightarrow \hat{x}$, and the definition of the loss function $\mathcal{L}_\text{VQVAE}$ and learning aspect of the VQVAE. 
+We divide the description of the VQVAE implementation into two sections: the procedure of reconstructing the input $x \rightarrow \hat{x}$, and the definition of the loss function $\mathcal{L}_\text{VQVAE}$ and learning aspect of the VQVAE. 
 
 \subsection{Reconstruction}
 
@@ -109,6 +109,7 @@ The codebook-learning loss is defined as
 The first term in the codebook-learning loss,
 \begin{equation}
     ||\text{sg}\left[ E(\text{STFT}(x))\right] - z_q||_2^2
+    \label{eq:codebook_update}
 \end{equation}
 measures the difference between the stop-gradient, $\text{sg}\left[\cdot\right]$, aplied encoded representation and the quantized latent vector $z_q$. This term ensures that the chosen quantized vectors from the codebook is as close as possible to the output of the encoder. By applying the stop gradient operator, we prevent the gradients from backpropagating through the encoder during this part of the loss calculation.
 Isolating the calculating to just act on the codebook.
@@ -130,14 +131,17 @@ This approach facilitates the update of the encoder's parameters in response to 
 
 \begin{figure}[H]
     \includegraphics{figures/figure-pdf/gradients.pdf}
-    \caption{Visualization of the embedding space inspired by the original VQVAE paper\cite{neuvqvae}. The continous $z_{ij}$, in blue, gets mapped to the nearest token $z_k$. The gradient $\nabla_z \mathcal{L}$ in the backpropagation is copied from the decoder to the encoder. }
+    \caption{Visualization of the embedding space inspired by the original VQVAE paper\cite{neuvqvae}. Continous representations $z_{ij}$ (in blue) are mapped to the nearest codebook token $z_k$. During backpropagation, the gradient $\nabla_z\mathcal{L}$ is copied from the decoder to the encoder, enabling the encoder to adjust its outputs in subsequent forward passes.}
 \end{figure}
 
-The gradient transfer modifier the encoder's output in subsequent forward passes. Simultaneously, the codebook loss $\mathcal{L}_\text{codebook}$ updates the codebook tokens to better represent the evolving outputs of the encoder. 
-the 
+The gradient transfer modifies the encoder's output in subsequent forward passes. Simultaneously, the codebook loss $\mathcal{L}_\text{codebook}$ updates the codebook tokens to better represent the evolving outputs of the encoder. 
+
+The update of the codebook tokens in response to the encoder's continous output is achieved in eq \ref{eq:codebook_update} using exponential moving averages (EMAs) and the K-means algorithm. This is further 
+explained in the original VQVAE paper's appendix\cite{neuvqvae}.
+
 \section{Modifying the VQVAE for Enhanced Self Supervised Learning}
 In this section we present our modification of the VQVAE, specifically tailored to leverage the strengths of Self Supervised Learning (SSL).
-The primary goal of this modification is to build upon the existing VQVAE architecture, while adapting its encoder to produce more robust and informative latent representations.
+The primary goal of this modification is to build upon the existing VQVAE architecture, while adapting its encoder to produce more robust and informative latent representations invariant to distortions in the input data.
 To achieve this we propose the integration of the Barlow Twins method with the VQVAE encoder.
 
 
@@ -195,10 +199,10 @@ These techniques manipulate the time series data directly in the time domain. A 
 \subsubsection*{Time-Frequency Domain Augmentations}
 These techniques operate on the time-frequency representation of the time series, offering a different perspective for augmentation:
 
-\textbf{STFT Augmentation}: The most comprehensive technique in this implementation is the STFT (Short Time Fourier Transform) augmentation. It involves transforming the time series into the frequency domain using STFT, modifying the phase components using noise, and then reconstructing the time series. This process is particularly effective in introducing complex and subtle variations that are not easily achievable through direct time domain manipulations.
+\textbf{STFT Augmentation}: The most comprehensive technique in this implementation is the STFT (Short Time Fourier Transform) augmentation. It involves transforming the time series into the frequency domain using STFT, modifying the phase components using noise, and then reconstructing the time series. With this technique we hope to introduce more complex and subtle variations that are not easily achievable through direct time domain manipulations.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/figure-pdf/Augmentations.pdf}
-    \caption{Visualization of the flip, slope and STFT augmentation aplied on a timeseries. }
+    \caption{Visualization of the augmentation techniques.}
 \end{figure}

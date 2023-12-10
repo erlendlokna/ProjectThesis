@@ -38,7 +38,7 @@
 \contentsline {section}{\numberline {4.4}Modifying the VQVAE for Enhanced Self Supervised Learning}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Modifying the VQVAE encoder}{23}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Projector}{24}{subsection.4.4.2}%
-\contentsline {subsubsection}{Learning}{24}{section*.24}%
+\contentsline {subsubsection}{Learning}{25}{section*.24}%
 \contentsline {subsection}{\numberline {4.4.3}Augmentation Techniques}{25}{subsection.4.4.3}%
 \contentsline {chapter}{\numberline {5}Experimental Setup}{28}{chapter.5}%
 \contentsline {section}{\numberline {5.1}UCR Archive}{28}{section.5.1}%
