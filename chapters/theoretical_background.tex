@@ -244,15 +244,14 @@ As a fundemental principle of latent variable models, the Autoencoder explicates
 Lets consider a dataset, denoted as $\mathbf{x}=\{x_1, x_2, \cdots, x_n \}$, which comprises observed data points. Corresponding to these data points, we have latent variables $\mathbf{z}=\{z_1, z_2, \cdots, z_n \}$, which represent hidden factors or features extracted by the autoencoder.
 The model parameters denoted as $\theta$, govern the transformation from data to latent space and vice versa.
 
-The relationship is explained by the marginal distribution, expressed as follows:
+The bayesian relationship is explained by the marginal distribution, expressed as follows:
 
 \begin{equation}
     p_\theta(x) = \int_zp_\theta(x, z) dz= \int_z p_\theta(z)p_\theta(x|z)dz    
 \end{equation}
-
 \subsubsection{Variational inference and optimization}
 The optimization problem is to optimize $\theta$ to efficiently transform input data into a latent representation and reconstruct the input based on the latent representation.
-Using the posteriors $p_\theta(\mathbf{z}|\mathbf{x})$ and $p_\theta(\mathbf{x}|\mathbf{z})$, and prior $p_\theta(\mathbf{z})$. All parameterized by $\theta$.
+Using the posterior $p_\theta(\mathbf{x}|\mathbf{z})$ and prior $p_\theta(\mathbf{z})$. All parameterized by $\theta$.
 \subsubsection{Challenges in Maximum Likelihood Estimation}
 Optimizing the model parameters \( \theta \) through Maximum Likelihood Estimation poses significant computational challenges. The optimization objective for \( \theta \) is to maximize the log likelihood of the observed data:
 
@@ -260,7 +259,7 @@ Optimizing the model parameters \( \theta \) through Maximum Likelihood Estimati
     \theta^* = \argmax_\theta \sum_{i=1}^n \log p(x_i | \theta)
 \end{equation}
 
-However, this requires evaluating an integral over the latent variables that is intractable:
+However, this requires evaluating an integral over the latent distribution that is intractable:
 
 \begin{equation}
     \theta^* = \argmax_\theta \sum_{i=1}^n \log\int_{z_i}p_\theta(x|z)p_\theta(z)

@@ -13,16 +13,16 @@ Stage 1 aligns with our objectives, as we are interested in the latent space gen
 %It operates by using a block like structure, where each block is designed to process the input data sequentially.
 The Encoder model, inspired by the fundamental properties of CNNs and the ResNet architecture introduced by He et al.\cite{ResLearn}, is designed to compress the input data into a compact and manageable representation.
 Approximating the posterior distribution $q_\phi(z|x)$, the encoder learns to map the input data to a latent space. 
-To efficiently approximate the posterior we combine two results: the CNNs ability to learn complex patterns and features within the input data, and the ResNet's ability to train deeper networks. This is achieved by using a block like structure, where each block is designed to process the input data sequentially.
+To efficiently approximate the posterior we combine the two results: the CNNs ability to learn complex patterns and features within the input data, and the ResNet's ability to train deeper networks. This is achieved by using a block like structure, where each block is designed to process the input data sequentially.
 
-\textbf{Encoder blocks} are the component responsible for giving the model a perceptual view of the input data aswell as downsampling it to a lower dimension. The downsampling is achieved through convolutional layers that strategically reduce the dimensionality of the input, while highlighting important features in non linear activation maps. 
-Following the convolutional layer, batch normalization is employed. This technique normalizes the output of the convolution by adjusting and scaling the activations. It allows the network to use higher learning rates, as it reduces the internal covariate shift which in turn makes the learning process more efficient and stable, as described by Ioffe and Szegedy\cite{batchnorm}.
+\textbf{Encoder blocks} are the component responsible for giving the model a perceptual view of the input data aswell as a downsampling to a lower dimension. This is achieved through convolutional layers that strategically reduce the dimensionality of the input, while highlighting important features in non linear activation maps. 
+Following the convolutional layer, tha activation map is normalized through batch normalization. This technique adjusts and scales the activations. Allowing the network to use higher learning rates, as it reduces the internal covariate shift which in turn makes the learning process more efficient and stable, as described by Ioffe and Szegedy\cite{batchnorm}.
 
 \textbf{Residual blocks} introduce residual or shortcut connections, allowing the encoder to have more layers without sacrifizing efficiency in training. 
 These are the building blocks of the original ResNet architecture.
 
 The complete encoder arhitecture is illustrated in figure \ref{fig:Encoder}. The first encoder block is responsible for reducing the dimensionality of the input data. The following encoder blocks sequentially refines the activation maps to include more complex patterns and features.
-The number of encoder blocks is determined by a downsampling rate which is determined by the input size and the amount of compression configured for the model. We use the same downsampling rate as done by Lee et al\cite{lee2023masked} in their TimeVQVAE implementation, here they also include four residual blocks.
+The number of encoder blocks is determined by a downsampling rate which is determined by the input size and the amount of compression configured for the model. The amount of compression in this implementation is the same as in the TimeVQVAE imlpementation.
 
 
 \begin{figure}[H]
@@ -34,7 +34,7 @@ The number of encoder blocks is determined by a downsampling rate which is deter
 \section{Decoder}
 The Decoder model, also ispired by CNNs and ResNet, is designed to reconstruct the input data from the latent representation. Approximating the likelihood $p_\theta(x|z)$.
 Its main function is decompression. It is responsible for the upsampling of the latent representation to a higher dimension, while also refining the feature maps to recover details that were lost during encoding.
-Like the encoder the decoder consists of two two types of blocks, decoder blocks and residual blocks.
+Like the encoder, the decoder consists of two two types of blocks, decoder blocks and residual blocks.
 
 
 \textbf{Decoder blocks} are the component responsible for upsampling the latent representation to a higher dimension. This is achieved through the use of transposed convolutional layers, often referred to as deconvolutional layers. These layers effectively reverse the operation of convolution by learning to expand a compressed feature map onto a larger spatial canvas.
@@ -46,7 +46,10 @@ The decoder's architecture is characterized by a series residual blocks followed
 
 
 \section{VQVAE}
-The VQVAE's primary objective is to learn discrete latent representations that can be used to reconstruct the input timeseries data. It is implemented using a Encoder $E$, Decoder $D$ and a vector quantifier.
+
+We divide the description of the VQVAE implementation into two sections: procedure of reconstructionm, $\hat{x}$, and the definition of the loss function $\mathcal{L}_\text{VQVAE}$. 
+
+\subsection{Reconstruction}
 
 Prior to the encoder, the input $\mathbf{x}$ (a timeseries) is passed through a Short Time Fourier Transform (STFT), producing $\mathbf{u}$. 
 
@@ -95,7 +98,7 @@ By replacing the norms with MSE we get the implemented reconstruction loss:
 \end{equation}
 
 \subsubsection{Codebook-learning loss}
-The codebook learning loss will ensure that the quantized latent representations, $\mathbf{z_q}$, effectively approximate the continues latent space $\mathbf{z}$, thereby maintaining a structured and meaning full latent representation. 
+The codebook learning loss will ensure that the quantized latent representations, $\mathbf{z_q}$, effectively approximate the continous latent space $\mathbf{z}$, thereby maintaining a structured and meaning full latent representation. 
 
 The codebook-learning loss is defined as
 \begin{equation}
@@ -114,12 +117,20 @@ The second term,
 \begin{equation}
     \beta|| E(\text{STFT}(x)) - \text{sg}\left[ z_q \right]||_2^2
 \end{equation}
-encourages the encoder's output to move closer to the quantized vectors. The parameter $\beta$ acts as a balanding factor, controlling the strength. In this implementation we set $\beta$ to be 1 as done in the TimeVQVAE implementation.
+encourages the encoder's output to move closer to the quantized vectors. The parameter $\beta$ acts as a balanding factor, and is refered to as the commitment weigth. Consistent with the TimeVQVAE implementation, $\beta$ is set to be 1.
 By applying the stop gradient on the quantized vector $z_q$, this term focuses on updating the encoder's parameters to produce outputs that are more aligned with the existing
 codebook vectors.
 
-Togheter, these two terms ensure that the codebook adapts to the encoded, $z$. Simultaneously, the encoder adapts to the quantized $z_q$. As a result the Encoder is tuned to produce representations that are effectively quantized by the codebook.
-As done in the reconstruction loss the norms, $||\cdot||_2^2$, is replaced with MSE in our loss  calculation.
+Togheter, these two terms ensure that the codebook adapts to the encoded, $z$. Simultaneously, the encoder adapts to the quantized $z_q$. As a result the Encoder codebook pair aproximate the categorical posterior, giving the benefits of the VQVAE architecture.
+As done in the reconstruction loss the norms, $||\cdot||_2^2$, is replaced with MSE in our loss calculation.
+
+\subsubsection{Gradient calculations}
+As the quantization is a non-differentiable transformation, the gradients are copied from the decoder to the encoder. As done in the original paper by Oord et al\cite{neuvqvae} and the TimeVQVAE paper\cite{lee2023masked}.
+
+\begin{figure}
+    \includegraphics{figures/figure-pdf/gradients.pdf}
+\end{figure}
+
 \section{Modifying the VQVAE for Enhanced Self Supervised Learning}
 In this section we present our modification of the VQVAE, specifically tailored to leverage the strengths of Self Supervised Learning (SSL).
 The primary goal of this modification is to build upon the existing VQVAE architecture, while adapting its encoder to produce more robust and informative latent representations.

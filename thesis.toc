@@ -30,13 +30,15 @@
 \contentsline {section}{\numberline {4.1}Encoder}{18}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Decoder}{19}{section.4.2}%
 \contentsline {section}{\numberline {4.3}VQVAE}{20}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Learning}{21}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Reconstruction}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Learning}{21}{subsection.4.3.2}%
 \contentsline {subsubsection}{Reconstruction}{21}{section*.19}%
 \contentsline {subsubsection}{Codebook-learning loss}{22}{section*.20}%
-\contentsline {section}{\numberline {4.4}Modifying the VQVAE for Enhanced Self Supervised Learning}{22}{section.4.4}%
+\contentsline {subsubsection}{Gradient calculations}{22}{section*.21}%
+\contentsline {section}{\numberline {4.4}Modifying the VQVAE for Enhanced Self Supervised Learning}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Modifying the VQVAE encoder}{23}{subsection.4.4.1}%
-\contentsline {subsubsection}{Learning}{23}{section*.22}%
-\contentsline {subsection}{\numberline {4.4.2}Augmentation Techniques}{24}{subsection.4.4.2}%
+\contentsline {subsubsection}{Learning}{24}{section*.24}%
+\contentsline {subsection}{\numberline {4.4.2}Augmentation Techniques}{25}{subsection.4.4.2}%
 \contentsline {chapter}{\numberline {5}Experimental Setup}{27}{chapter.5}%
 \contentsline {section}{\numberline {5.1}UCR Archive}{27}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Reconstruction evaluation}{28}{section.5.2}%

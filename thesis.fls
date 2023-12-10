@@ -2539,6 +2539,11 @@ INPUT ./figures/figure-pdf/VQVAE.pdf
 INPUT figures/figure-pdf/VQVAE.pdf
 INPUT ./figures/figure-pdf/VQVAE.pdf
 INPUT ./figures/figure-pdf/VQVAE.pdf
+INPUT ./figures/figure-pdf/gradients.pdf
+INPUT ./figures/figure-pdf/gradients.pdf
+INPUT figures/figure-pdf/gradients.pdf
+INPUT ./figures/figure-pdf/gradients.pdf
+INPUT ./figures/figure-pdf/gradients.pdf
 INPUT ./figures/figure-pdf/BarlowTwinsVQVAE.pdf
 INPUT ./figures/figure-pdf/BarlowTwinsVQVAE.pdf
 INPUT figures/figure-pdf/BarlowTwinsVQVAE.pdf
